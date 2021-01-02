@@ -197,10 +197,6 @@ def update_green (spin, seed, T, J):
     if (p == 2 and q == 0) or (p == 0 and q == 1):
         calc()
 
-import math
-import numpy as np
-from numba import cuda
-
 @cuda.jit
 def update_black_ext (spin, seed, T, J, h):
     m = T.shape[1]
